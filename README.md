@@ -1,5 +1,9 @@
 RouterOS style Cisco Clientless SSL / AnyConnect login portal.
 
+## Screenshot
+
+![](misc/screenshot.png)
+
 ## Installation
 
 ### Using ASDM
