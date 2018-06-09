@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Copyright (c) 2006-2011 by Cisco Systems, Inc.
+All rights reserved.
+
+Note: all whitespaces in tag values are significant and preserved. 
+
+
+Tag: custom
+Description: Root customization tag
+
+Tag: custom/languages
+Description: Contains list of languages, recognized by ASA
+Value: string containing comma-separated language codes. Each language code is
+       a set dash-separated alphanumeric characters, started with 
+       alpha-character (for example: en, en-us, irokese8-language-us)
+Default value: en-us
+
+Tag: custom/default-language
+Description: Language code that is selected when the client and the server
+             were not able to negotiate the language automatically.
+             For example the set of languages configured in the browser
+             is "en,ja", and the list of languages, specified by 
+             'custom/languages' tag is "cn,fr", the default-language will be
+             used.
+Value: string, containing one of the language coded, specified in 
+       'custom/languages' tag above.
+Default value: en-us
+
+*********************************************************
+
+Tag: custom/auth-page
+Description: Contains authentication page settings
+
+*********************************************************
+Tag: custom/auth-page/window
+Description: Contains settings of the authentication page browser window  
+
+Tag: custom/auth-page/window/title-text
+Description: The title of the browser window of the authentication page
+Value: arbitrary string 
+Default value: Browser's default value
+
+
+*********************************************************
+Tag: custom/auth-page/full-customization
+Description: Settings for full customization of the login page   
+
+Tag: custom/auth-page/full-customization/mode
+Description: Full customization mode
+Value: enable|disable
+Default value: disable
+
+Tag: custom/auth-page/full-customization/url
+Description: the URL of the custom login page
+Value: arbitrary string 
+Default value: empty string
+
+
+*********************************************************
+
+Tag: custom/auth-page/title-panel 
+Description: Contains settings for the title pannel
+
+Tag: custom/auth-page/title-panel/mode 
+Description: The title panel mode
+Value: enable|disable
+Default value: disable
+
+Tag: custom/auth-page/title-panel/text 
+Description: The title panel text.
+Value: arbitrary string  
+Default value: empty string
+
+Tag: custom/auth-page/title-panel/logo-url
+Description: The URL of the logo image (imported via "import webvpn webcontent")
+Value: URL string
+Default value: empty image URL 
+
+Tag: custom/auth-page/title-panel/background-color
+Description: The background color of the title panel
+Value: HTML color format, for example #FFFFFF
+Default value: #FFFFFF
+
+Tag: custom/auth-page/title-panel/font-color
+Description: The background color of the title panel
+Value: HTML color format, for example #FFFFFF 
+Default value: #000000
+
+Tag: custom/auth-page/title-panel/font-weight
+Description: The font weight
+Value: CSS font size value, for example bold, bolder,lighter etc.
+Default value: empty string
+
+Tag: custom/auth-page/title-panel/font-size
+Description: The font size
+Value: CSS font size value, for example 10pt, 8px, x-large, smaller etc.
+Default value: empty string
+
+Tag: custom/auth-page/title-panel/gradient
+Description: Specifies using the background color gradient
+Value: yes|no
+Default value:no
+
+Tag: custom/auth-page/title-panel/style
+Description: CSS style of the title panel
+Value: CSS style string
+Default value: empty string
+
+
+*********************************************************
+
+Tag: custom/auth-page/form-order 
+Description: Defines order of the logon form fields
+
+Tag: custom/auth-page/form-order/group 
+Description: Order of the group selector
+Value: integer
+Default value: 100
+
+Tag: custom/auth-page/form-order/username 
+Description: Order of the username field
+Value: integer
+Default value: 200
+
+Tag: custom/auth-page/form-order/password 
+Description: Order of the password field
+Value: integer
+Default value: 300
+
+Tag: custom/auth-page/form-order/internal-password 
+Description: Order of the internal password field
+Value: integer
+Default value: 400
+
+Tag: custom/auth-page/form-order/secondary-username 
+Description: Order of the secondary username field
+Value: integer
+Default value: 500
+
+Tag: custom/auth-page/form-order/secondary-password 
+Description: Order of the secondary password field
+Value: integer
+Default value: 600
+
+
+*********************************************************
+
+Tag: custom/auth-page/copyright-panel
+Description: Contains the copyright panel settings
+
+Tag: custom/auth-page/copyright-panel/mode
+Description: The copyright panel mode
+Value: enable|disable
+Default value: disable
+
+Tag: custom/auth-page/copyright-panel/text
+Description: The copyright panel text
+Value: arbitrary string
+Default value: empty string 
+
+*********************************************************
+
+Tag: custom/auth-page/info-panel
+Description: Contains information panel sesstings
+
+Tag: custom/auth-page/info-panel/mode
+Description: The information panel mode 
+Value: enable|disable
+Default value: disable
+
+Tag: custom/auth-page/info-panel/image-position
+Description: Position of the image, above or below the informational panel text
+Values: above|below
+Default value: above
+
+Tag: custom/auth-page/info-panel/image-url
+Description: URL of the information panel image (imported via "import webvpn webcontent")
+Value: URL string 
+Default value: empty image URL
+
+Tag: custom/auth-page/info-panel/text
+Description: Text of the information panel
+Text: arbitrary string
+Default value: empty string
+
+*********************************************************
+
+Tag: custom/auth-page/logon-form
+Description: Contains logon form settings
+
+Tag: custom/auth-page/logon-form/title-text
+Description: The logon form title text
+Value: arbitrary string
+Default value: "Logon" 
+
+Tag: custom/auth-page/logon-form/message-text
+Description: The message inside of the logon form
+Value: arbitrary string
+Default value: empty string
+
+Tag: custom/auth-page/logon-form/username-prompt-text
+Description: The username prompt text
+Value: arbitrary string
+Default value: "Username"
+
+Tag: custom/auth-page/logon-form/secondary-username-prompt-text
+Description: The secondary username prompt text
+Value: arbitrary string
+Default value: "2nd Username"
+
+Tag: custom/auth-page/logon-form/password-prompt-text
+Description: The password prompt text
+Value: arbitrary string
+Default value: "Password" 
+
+Tag: custom/auth-page/logon-form/secondary-password-prompt-text
+Description: The secondary  password prompt text
+Value: arbitrary string
+Default value: "2nd Password" 
+
+Tag: custom/auth-page/logon-form/passcode-prompt-text
+Description: The passcode prompt text
+Value: arbitrary string
+Default value: "Passcode" 
+
+Tag: custom/auth-page/logon-form/passcode-prompt-text
+Description: The secondary passcode prompt text 
+Value: arbitrary string
+Default value: "2nd Passcode" 
+
+
+Tag: custom/auth-page/logon-form/internal-password-prompt-text
+Description: The internal password prompt text
+Value: arbitrary string
+Default value: "Internal Password" 
+
+Tag: custom/auth-page/logon-form/group-prompt-text
+Description: The group selector prompt text
+Value: arbitrary string
+Default value: "Group" 
+
+
+Tag: custom/auth-page/logon-form/submit-button-text
+Description:The submit button text
+Value: arbitrary string
+Default value: "Logon"
+
+
+Tag: custom/auth-page/logon-form/title-font-color
+Description: The font color of the logon form title
+Value: HTML color format, for example #FFFFFF 
+Default value: #000000
+
+Tag: custom/auth-page/logon-form/title-background-color
+Description: The background color of the logon form title
+Value: HTML color format, for example #FFFFFF 
+Default value: #666666
+
+
+Tag: custom/auth-page/logon-form/font-color
+Description: The font color of the logon form
+Value: HTML color format, for example #FFFFFF 
+Default value: #000000
+
+Tag: custom/auth-page/logon-form/background-color
+Description: The background color of the logon form
+Value: HTML color format, for example #FFFFFF 
+Default value: #ffffff
+
+Tag: custom/auth-page/logon-form/border-color
+Description: The background color of the logon form
+Value: HTML color format, for example #FFFFFF 
+Default value: #858A91
+
+
+*********************************************************
+
+Tag: custom/auth-page/logout-form
+Description: Contains the logout form settings
+
+Tag: custom/auth-page/logout-form/title-text
+Description: The logout form title text
+Value: arbitrary string
+Default value: "Logout"
+
+Tag: custom/auth-page/logout-form/message-text
+Description: The logout form message text
+Value: arbitrary string
+Default value: Goodbye.
+               For your own security, please: 
+               Clear the browser's cache
+               Delete any downloaded files
+               Close the browser's window
+
+Tag: custom/auth-page/logout-form/login-button-text
+Description: The text of the button sending th euser to the logon page
+Value: arbitrary string
+Default value: "Logon"
+
+Tag: custom/auth-page/logout-form/hide-login-button
+Description: Hides the logon button 
+Value: yes|no
+Default value: no
+
+Tag: custom/auth-page/logout-form/title-font-color
+Description: The font color of the logout form title
+Value: HTML color format, for example #FFFFFF 
+Default value: #000000
+
+Tag: custom/auth-page/logout-form/title-background-color
+Description: The background color of the logout form title
+Value: HTML color format, for example #FFFFFF 
+Default value: #666666
+
+
+Tag: custom/auth-page/logout-form/font-color
+Description: The font color of the logout form
+Value: HTML color format, for example #FFFFFF 
+Default value: #000000
+
+Tag: custom/auth-page/logout-form/background-color
+Description: The background color of the logout form
+Value: HTML color format, for example #FFFFFF 
+Default value: #ffffff
+
+Tag: custom/auth-page/logout-form/border-color
+Description: The background color of the logout form
+Value: HTML color format, for example #FFFFFF 
+Default value: #858A91
+
+
+
+
+*********************************************************
+
+Tag: custom/auth-page/language-selector
+Description: Contains the language selector settings
+
+Tag: custom/auth-page/language-selector/mode
+Description: The language selector mode
+Value: enable|disable
+Default value: disable
+
+Tag: custom/auth-page/language-selector/title
+Description: The language selector title
+Value: arbitrary string
+Default value: empty string 
+
+Tag: custom/auth-page/language-selector/language (multiple)
+Description: Contains the language settings
+
+Tag: custom/auth-page/language-selector/language/code
+Description: The code of the laguage
+Value (required): The language code string
+
+Tag: custom/auth-page/language-selector/language/text
+Description: The text of the language in the language selector drop-down box
+Value (required): arbitrary string
+
+*********************************************************
+
+Tag: custom/portal
+Description: Contains portal page settings
+
+*********************************************************
+
+Tag: custom/portal/window
+Description: Contains the portal page browser window settings
+
+Tag: custom/portal/window/title-text
+Description: The title of the browser window of the portal page
+Value: arbitrary string
+Default value: Browser's default value
+
+*********************************************************
+
+Tag: custom/portal/title-panel 
+Description: Contains settings for the title pannel
+
+Tag: custom/portal/title-panel/mode 
+Description: The title panel mode
+Value: enable|disable
+Default value: disable
+
+Tag: custom/portal/title-panel/text 
+Description: The title panel text.
+Value: arbitrary string  
+Default value: empty string
+
+Tag: custom/portal/title-panel/logo-url
+Description: The URL of the logo image (imported via "import webvpn webcontent")
+Value: URL string
+Default value: empty image URL 
+
+Tag: custom/portal/title-panel/background-color
+Description: The background color of the title panel
+Value: HTML color format, for example #FFFFFF
+Default value: #FFFFFF
+
+Tag: custom/auth-pa/title-panel/font-color
+Description: The background color of the title panel
+Value: HTML color format, for example #FFFFFF 
+Default value: #000000
+
+Tag: custom/portal/title-panel/font-weight
+Description: The font weight
+Value: CSS font size value, for example bold, bolder,lighter etc.
+Default value: empty string
+
+Tag: custom/portal/title-panel/font-size
+Description: The font size
+Value: CSS font size value, for example 10pt, 8px, x-large, smaller etc.
+Default value: empty string
+
+Tag: custom/portal/title-panel/gradient
+Description: Specifies using the background color gradient
+Value: yes|no
+Default value:no
+
+Tag: custom/portal/title-panel/style
+Description: CSS style for title text
+Value: CSS style string
+Default value: empty string
+
+*********************************************************
+
+Tag: custom/portal/application (multiple)
+Description: Contains the application setting 
+
+Tag: custom/portal/application/mode
+Description: The application mode
+Value: enable|disable
+Default value: enable
+
+Tag: custom/portal/application/id
+Description:The application ID. Standard application ID's are: home, web-access, file-access, app-access, network-access
+Value: The application ID string
+Default value: empty string
+
+Tag: custom/portal/application/tab-title
+Description: The application tab text in the navigation panel
+Value: arbitrary string
+Default value: empty string
+
+Tag: custom/portal/application/order
+Description: The order of the application's tab in the navigation panel. Applications with lesser ordere go first.
+Value: arbitrary number
+Default value: 1000
+
+Tag: custom/portal/application/url-list-title
+Description: The title of the application's URL list pane (in group mode)
+Value: arbitrary string 
+Default value: Tab tite value concatenated with " Bookmarks"
+
+*********************************************************
+
+Tag: custom/portal/navigation-panel
+Description: Contains the navigation panlel settings
+
+Tag: custom/portal/navigation-panel/mode
+Description: The navigation panel mode
+Value: enable|disable
+Default value: enable
+
+*********************************************************
+
+Tag: custom/portal/toolbar
+Description: Contains the toolbar settings
+
+Tag: custom/portal/toolbar/mode
+Description: The toolbar mode
+Value: enable|disable
+Default value: enable
+
+Tag: custom/portal/toolbar/prompt-box-title
+Description: The universal promt box title
+Value: arbitrary string
+Default value: "Address"
+
+Tag: custom/portal/toolbar/browse-button-text
+Description: The browse button text
+Value: arbitrary string
+Default value: "Browse"
+
+Tag: custom/portal/toolbar/logout-prompt-text
+Description: The logout prompt text
+Value: arbitrary string
+Default value: "Logout"
+
+*********************************************************
+
+Tag: custom/portal/column (multiple)
+Description: Contains settings of the home page column(s)
+
+Tag: custom/portal/column/order
+Description: The order the colum from left to right. Columns with lesser order values go first
+Value: arbitrary number
+Default value: 0
+
+Tag: custom/portal/column/width
+Description: The home page colum width
+Value: percent 
+Default value: default value set by browser
+Note: The actual width may be increased by browser to accomodate content 
+
+
+*********************************************************
+
+Tag: custom/portal/url-lists
+Description: Contains settings for URL lists on the home page
+
+Tag: custom/portal/url-lists/mode
+Description: Specifies how to display URL lists on the home page: 
+             group URL lists by application (group) or 
+             show individual URL lists (nogroup).
+             URL lists fill out cells of the configured columns, which are not taken 
+             by custom panes.
+             Use the attribute value "nodisplay" to not show URL lists on the home page.
+
+Value: group|nogroup|nodisplay
+Default value: group
+
+*********************************************************
+
+Tag: custom/portal/pane (multiple)
+Description: Contains settings of the custom pane on the home page
+
+Tag: custom/portal/pane/mode
+Description: The mode of the pane
+Value: enable|disable
+Default value: disable
+
+Tag: custom/portal/pane/title
+Description: The title of the pane
+Value: arbitrary string
+Default value: empty string
+
+Tag: custom/portal/pane/notitle
+Description: Hides pane's title bar
+Value: yes|no
+Default value: no
+
+Tag: custom/portal/pane/type
+Description: The type of the pane. Supportad types:
+             TEXT - inline arbitrary text, may contain HTML tags;
+             HTML - HTML content specified by URL shown in the individual iframe;
+             IMAGE - image specified by URL
+             RSS - RSS feed specified by URL
+Value: TEXT|HTML|IMAGE|RSS
+Default value: TEXT
+
+Tag: custom/portal/pane/url
+Description: The URL for panes with type  HTML,IMAGE or RSS
+Value: URL string
+Default value: empty string
+
+Tag: custom/portal/pane/text
+Description: The text value for panes with type TEXT
+Value: arbitrary string
+Default value:empty string
+
+Tag: custom/portal/pane/column
+Description: The column where the pane located.
+Value: arbitrary number
+Default value: 1
+
+Tag: custom/portal/pane/row
+Description: The row where the pane is located
+Value: arbitrary number
+Default value: 1
+
+Tag: custom/portal/pane/height
+Description: The height of the pane
+Value: number of pixels
+Default value: default value set by browser
+
+
+*********************************************************
+
+Tag: custom/portal/timeout-alerts/alert-tooltip
+Description: Show panel timer alerts instead of pop-up windows.
+Value: yes or no
+Default value: empty string
+
+
+Tag: custom/portal/timeout-alerts/idle-timeout-message
+Description: Message text to notify user about approaching an idle timeout
+Value: arbitary string
+Default value: empty string
+
+
+Tag: custom/portal/timeout-alerts/session-timeout-message
+Description: Message text to notify user about approaching a session timeout
+Value: arbitary string
+Default value: empty string
+
+
+*********************************************************
+
+Tag: custom/portal/browse-network-title
+Description: The title of the browse network link 
+Value: arbitrary string
+Default value: Browse Entire Network
+
+
+Tag: custom/portal/access-network-title
+Description: The title of the link to start a network access session 
+Value: arbitrary string
+Default value: Start AnyConnect
+
+
+*********************************************************
+
+Tag: custom/portal/home-page/mode
+Description: Home page settings
+Value: standard|web-page 
+Default value: standard
+
+Tag: custom/portal/home-page/url
+Description: a URL of a custom web page loaded as home page  
+Value: arbitrary URL
+Default value: empty string
+
+*********************************************************
+
+Tag: custom/portal/external-portal/mode
+Description: enables or disables the external portal
+Value: enable, disable
+Default value: disable
+
+Tag: custom/portal/external-portal/url
+Description: external portal URL  
+Value: arbitrary URL  
+Default value: none
+
+Tag: custom/portal/external-portal/method
+Description: method of HTTP request
+Values: get, post
+Default value: get 
+
+Tag: custom/portal/external-portal/preload-page-url
+Description:  arbitrary URL  
+Values: arbitrary URL  
+Default value: none
+
+Tag: custom/portal/external-portal/before-post-script
+Description: JavaScript to execute before POST request submission
+Values: arbitrary JavaScript
+Default value: none
+
+
+
+Tag: custom/portal/external-portal/wait-time
+Description:  Time to wait for loading the preload page before submitting POST request 
+Values: number of seconds  
+Default value: 10
+
+Tag: custom/portal/external-portal/use-smart-tunnel
+Description:  Load the external portal via a smart tunnel
+Values: yes, no
+Default value: no
+
+Tag: custom/portal/external-portal/post-param (multiple)
+Description:  Collection of POST parameters
+
+Tag: custom/portal/external-portal/post-param/name
+Description:  Post parameter value
+Values: arbitrary string
+Default value: none
+
+
+Tag: custom/portal/external-portal/post-param/value
+Description:  Post parameter value
+Values: arbitrary string
+Default value: none
+
+
+-->
+<custom>
+   <localization>
+      <languages>en</languages>
+      <default-language>en</default-language>
+   </localization>
+    <auth-page>
+      <window>
+          <title-text l10n="yes"><![CDATA[SSL VPN Service]]></title-text>
+      </window>
+      <full-customization>
+          <mode>disable</mode>
+          <url></url>
+      </full-customization>
+      <language-selector>
+        <mode>disable</mode>
+        <title l10n="yes">Language:</title>  
+        <language>
+          <code>en</code>
+          <text>English</text>
+        </language>
+        <language>
+          <code>ja</code>
+          <text>日本 (Japanese)</text>
+        </language>
+        <language>
+          <code>fr</code>
+          <text>Français (French)</text>
+        </language>
+        <language>
+          <code>ru</code>
+          <text>Русский (Russian)</text>
+        </language>
+      </language-selector>
+      <logon-form>
+          <title-text l10n="yes"><![CDATA[Login]]></title-text>
+          <title-background-color><![CDATA[#666666]]></title-background-color>
+          <title-font-color><![CDATA[#ffffff]]></title-font-color>
+          <message-text l10n="yes"><![CDATA[Please enter your username and password.]]></message-text>
+          <username-prompt-text l10n="yes"><![CDATA[USERNAME:]]></username-prompt-text>
+          <secondary-username-prompt-text l10n="yes">2nd Username</secondary-username-prompt-text>
+          <password-prompt-text l10n="yes"><![CDATA[PASSWORD:]]></password-prompt-text>
+          <secondary-password-prompt-text l10n="yes">2nd Password</secondary-password-prompt-text>  
+          <passcode-prompt-text l10n="yes">Passcode</passcode-prompt-text>
+          <secondary-passcode-prompt-text l10n="yes">2nd Passcode</secondary-passcode-prompt-text>
+          <internal-password-prompt-text l10n="yes">Internal Password:</internal-password-prompt-text>
+          <group-prompt-text l10n="yes"><![CDATA[GROUP:]]></group-prompt-text>
+          <submit-button-text l10n="yes"><![CDATA[Login]]></submit-button-text>
+          <title-font-color><![CDATA[#ffffff]]></title-font-color>
+          <title-background-color><![CDATA[#666666]]></title-background-color>
+          <font-color>#000000</font-color>
+          <background-color>#ffffff</background-color>
+          <border-color>#858A91</border-color>
+      </logon-form>
+      <logout-form>
+          <title-text l10n="yes"><![CDATA[Logout]]></title-text>
+          <message-text l10n="yes"><![CDATA[Goodbye.<br>
+For your own security, please:<br>
+<li>Clear the browser's cache
+<li>Delete any downloaded files
+<li>Close the browser's window]]></message-text>
+          <login-button-text l10n="yes">Logon</login-button-text>
+          <hide-login-button>no</hide-login-button>
+          <title-background-color><![CDATA[#666666]]></title-background-color>
+          <title-font-color><![CDATA[#ffffff]]></title-font-color>
+          <title-font-color><![CDATA[#ffffff]]></title-font-color>
+          <title-background-color><![CDATA[#666666]]></title-background-color>
+          <font-color>#000000</font-color>
+          <background-color>#ffffff</background-color>
+          <border-color>#858A91</border-color>
+      </logout-form>
+      <title-panel>
+         <mode>enable</mode>
+         <text l10n="yes"><![CDATA[SSL VPN Service]]></text>
+         <logo-url l10n="yes">/+CSCOU+/csco_logo.gif</logo-url>
+         <gradient>yes</gradient>
+         <style></style>
+         <background-color><![CDATA[#ffffff]]></background-color>
+         <font-size><![CDATA[larger]]></font-size>
+         <font-color><![CDATA[#800000]]></font-color>
+         <font-weight><![CDATA[bold]]></font-weight>
+      </title-panel>
+      <form-order>
+         <group>100</group>
+         <username>200</username>
+         <password>300</password>
+         <internal-password>400</internal-password>
+         <secondary-username>500</secondary-username>
+         <secondary-password>600</secondary-password>
+      </form-order>  
+      <info-panel>
+        <mode>disable</mode>
+        <image-url l10n="yes">/+CSCOU+/clear.gif</image-url>
+        <image-position>above</image-position>
+        <text l10n="yes"></text>
+      </info-panel>
+      <copyright-panel>
+         <mode>disable</mode>
+         <text l10n="yes"></text>
+      </copyright-panel>
+    </auth-page>
+    <portal>
+      <title-panel>
+         <mode>enable</mode>
+         <text l10n="yes"><![CDATA[SSL VPN Service]]></text>
+         <logo-url l10n="yes">/+CSCOU+/csco_logo.gif</logo-url>
+         <gradient>yes</gradient>
+         <style></style>
+         <background-color><![CDATA[#ffffff]]></background-color>
+         <font-size><![CDATA[larger]]></font-size>
+         <font-color><![CDATA[#800000]]></font-color>
+         <font-weight><![CDATA[bold]]></font-weight>
+      </title-panel>
+      <timeout-alerts>
+         <alert-tooltip></alert-tooltip>
+         <idle-timeout-message l10n="yes">
+         </idle-timeout-message>
+         <session-timeout-message l10n="yes">
+         </session-timeout-message>
+      </timeout-alerts>
+      <browse-network-title l10n="yes">Browse Entire Network</browse-network-title>
+      <access-network-title l10n="yes">Start AnyConnect</access-network-title>
+      <application>
+         <mode>enable</mode>
+         <id>home</id>
+         <tab-title l10n="yes">Home</tab-title>
+         <order>1</order>
+      </application>
+      <application>
+         <mode>enable</mode>
+         <id>web-access</id>
+         <tab-title l10n="yes"><![CDATA[Web Applications]]></tab-title>
+         <url-list-title l10n="yes"><![CDATA[Web Bookmarks]]></url-list-title>
+         <order>2</order>
+      </application>
+      <application>
+         <mode>enable</mode>
+         <id>file-access</id>
+         <tab-title l10n="yes"><![CDATA[Browse Networks]]></tab-title>
+         <url-list-title l10n="yes"><![CDATA[File Folder Bookmarks]]></url-list-title>
+         <order>3</order>
+      </application>
+      <application>
+         <mode>enable</mode>
+         <id>app-access</id>
+         <tab-title l10n="yes"><![CDATA[Application Access]]></tab-title>
+         <order>4</order>
+      </application>
+      <application>
+         <mode>enable</mode>
+         <id>net-access</id>
+         <tab-title l10n="yes">AnyConnect</tab-title>
+         <order>4</order>
+      </application>
+      <toolbar>
+         <mode>enable</mode>
+         <logout-prompt-text l10n="yes">Logout</logout-prompt-text>
+         <prompt-box-title l10n="yes">Address</prompt-box-title>
+         <browse-button-text l10n="yes">Browse</browse-button-text>
+      </toolbar>
+      <column>
+         <width>100%</width>
+         <order>1</order>
+      </column>
+      <pane>
+         <type>TEXT</type>
+         <mode>disable</mode>
+         <title></title>
+         <text></text>
+         <notitle></notitle>
+         <column></column>
+         <row></row>
+         <height></height>
+      </pane>
+      <pane>
+         <type>IMAGE</type>
+         <mode>disable</mode>
+         <title></title>
+         <url l10n="yes"></url>
+         <notitle></notitle>
+         <column></column>
+         <row></row>
+         <height></height>
+      </pane>
+      <pane>
+         <type>HTML</type>
+         <mode>disable</mode>
+         <title></title>
+         <url l10n="yes"></url>
+         <notitle></notitle>
+         <column></column>
+         <row></row>
+         <height></height>
+      </pane>
+      <pane>
+         <type>RSS</type>
+         <mode>disable</mode>
+         <title></title>
+         <url l10n="yes"></url>
+         <notitle></notitle>
+         <column></column>
+         <row></row>
+         <height></height>
+      </pane>
+      <url-lists>
+         <mode>group</mode>
+      </url-lists>
+      <home-page>
+         <mode>standard</mode>
+         <url></url>
+      </home-page>
+      <external-portal>
+        <mode>disable</mode>
+        <url></url>
+        <method>get</method>
+        <preload-page-url><![CDATA[]]></preload-page-url>
+        <before-post-script><![CDATA[]]></before-post-script>
+        <wait-time>10</wait-time>
+        <use-smart-tunnel>no</use-smart-tunnel>
+        <post-param>
+            <name><![CDATA[]]></name>
+            <value><![CDATA[]]></value> 
+        </post-param>
+      </external-portal>
+    </portal>
+</custom>
