@@ -352,7 +352,7 @@ Tag: custom/auth-page/language-selector/language (multiple)
 Description: Contains the language settings
 
 Tag: custom/auth-page/language-selector/language/code
-Description: The code of the laguage
+Description: The code of the language
 Value (required): The language code string
 
 Tag: custom/auth-page/language-selector/language/text
@@ -475,7 +475,7 @@ Value: enable|disable
 Default value: enable
 
 Tag: custom/portal/toolbar/prompt-box-title
-Description: The universal promt box title
+Description: The universal prompt box title
 Value: arbitrary string
 Default value: "Address"
 
@@ -495,15 +495,15 @@ Tag: custom/portal/column (multiple)
 Description: Contains settings of the home page column(s)
 
 Tag: custom/portal/column/order
-Description: The order the colum from left to right. Columns with lesser order values go first
+Description: The order the column from left to right. Columns with lesser order values go first
 Value: arbitrary number
 Default value: 0
 
 Tag: custom/portal/column/width
-Description: The home page colum width
+Description: The home page column width
 Value: percent 
 Default value: default value set by browser
-Note: The actual width may be increased by browser to accomodate content 
+Note: The actual width may be increased by browser to accommodate content 
 
 
 *********************************************************
@@ -587,13 +587,13 @@ Default value: empty string
 
 Tag: custom/portal/timeout-alerts/idle-timeout-message
 Description: Message text to notify user about approaching an idle timeout
-Value: arbitary string
+Value: arbitrary string
 Default value: empty string
 
 
 Tag: custom/portal/timeout-alerts/session-timeout-message
 Description: Message text to notify user about approaching a session timeout
-Value: arbitary string
+Value: arbitrary string
 Default value: empty string
 
 
